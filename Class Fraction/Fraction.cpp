@@ -38,6 +38,27 @@ void Fraction::input()
 	cin >> denominator;
 }
 
+
+
+
+Fraction Fraction::add(Fraction b)
+{
+	Fraction result;
+	int resultN, resultD;
+	if (denominator == b.denominator)
+	{
+		resultN = numerator + b.numerator;
+		resultD = denominator;
+	}
+	else
+	{
+		resultD = denominator * b.denominator;
+		resultN = numerator * b.denominator + b.numerator * denominator;
+	}
+	return Fraction(resultN, resultD);
+}
+
+/*
 Fraction Fraction::add(Fraction a, Fraction b)
 {
 	Fraction result;
@@ -52,7 +73,29 @@ Fraction Fraction::add(Fraction a, Fraction b)
 	}
 	return Fraction(resultN, resultD);
 }
+*/
 
+
+
+Fraction Fraction::sub(Fraction b)
+{
+	Fraction result;
+	int resultN, resultD;
+	if (denominator == b.denominator)
+	{
+		resultN = numerator - b.numerator;
+		resultD = denominator;
+	}
+	else
+	{
+		resultD = denominator * b.denominator;
+		resultN = numerator * b.denominator - b.numerator * denominator;
+	}
+	return Fraction(resultN, resultD);
+}
+
+
+/*
 Fraction Fraction::sub(Fraction a, Fraction b)
 {
 	Fraction result;
@@ -67,7 +110,20 @@ Fraction Fraction::sub(Fraction a, Fraction b)
 	}
 	return Fraction(resultN, resultD);
 }
+*/
 
+
+
+Fraction Fraction::mult(Fraction b)
+{
+	Fraction result;
+	int resultN, resultD;
+	resultN = numerator * b.numerator;
+	resultD = denominator * b.denominator;
+	return Fraction(resultN, resultD);
+}
+
+/*
 Fraction Fraction::mult(Fraction a, Fraction b)
 {
 	Fraction result;
@@ -77,6 +133,19 @@ Fraction Fraction::mult(Fraction a, Fraction b)
 
 	return Fraction(resultN, resultD);
 }
+*/
+
+
+Fraction Fraction::div(Fraction b)
+{
+	Fraction result;
+	int resultN, resultD;
+	resultN = numerator * b.denominator;
+	resultD = denominator * b.numerator;
+	return Fraction(resultN, resultD);
+}
+
+/*
 Fraction Fraction::div(Fraction a, Fraction b)
 {
 	Fraction result;
@@ -86,7 +155,4 @@ Fraction Fraction::div(Fraction a, Fraction b)
 
 	return Fraction(resultN, resultD);
 }
-
-
-
-
+*/

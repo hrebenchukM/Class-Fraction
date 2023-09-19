@@ -14,16 +14,16 @@ int main()
 	cout << "b: ";
 	b.print();
 
-	Fraction aPlusb = Fraction::add(a, b);
+	Fraction aPlusb = a.add( b);
 	cout << "a+b: ";
 	aPlusb.print();
-	Fraction aSubB = Fraction::sub(a, b);
+	Fraction aSubB = a.sub( b);
 	cout << "a-b: ";
 	aSubB.print();
-	Fraction aMultB = Fraction::mult(a, b);
+	Fraction aMultB = a.mult( b);
 	cout << "a*b: ";
 	aMultB.print();
-	Fraction aDivB = Fraction::div(a, b);
+	Fraction aDivB = a.div( b);
 	cout << "a/b: ";
 	aDivB.print();
 

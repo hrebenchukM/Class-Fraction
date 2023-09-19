@@ -15,10 +15,17 @@ public:
 	int getNumerator();
 	int getDenominator();
 	void input();
-	static Fraction add(Fraction a, Fraction b);
-	static Fraction sub(Fraction a, Fraction b);
-	static Fraction mult(Fraction a, Fraction b);
-	static Fraction div(Fraction a, Fraction b);
+
+	//static Fraction add(Fraction a, Fraction b);
+	//static Fraction sub(Fraction a, Fraction b);
+	//static Fraction mult(Fraction a, Fraction b);
+	//static Fraction div(Fraction a, Fraction b);
+
+
+	Fraction add( Fraction b);
+    Fraction sub( Fraction b);
+	Fraction mult(Fraction b);
+	Fraction div(Fraction b);
 
 
 };
